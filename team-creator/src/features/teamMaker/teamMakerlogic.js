@@ -88,6 +88,8 @@ function nthClosest (raceTimesObjArr, goal, teams){
     let arr = raceTimesObjArr
     let b = 0
 
+
+
     for(let i = 0; i < teams; i){
         const close = closest(arr, goal, b)
         const newArr = arr.filter(time => time.total !== close.total)
@@ -103,18 +105,35 @@ function nthClosest (raceTimesObjArr, goal, teams){
     return closestTimes
 }
 
-function findClosestNthTimes (racerObj, teamSize) {
+export function findClosestNthTimes (racerObj, teamSize) {
+
+
     let racers = []
     let times = []
+
     racerObj.map(racer => {
         racers.push(racer.id)
         times.push(racer.time)
     })
 
-    const raceTimesObj = totalRaceTimes(k_combinations(racers, teamSize),tooMS(times))
-    const raceTimesAverage = averageRaceTime(totalRaceTimes(k_combinations(racers, teamSize),tooMS(times)))
+    const combinations = k_combinations(racers, teamSize)
+    const ms = tooMS(times)
+
+    const raceTimesObj = totalRaceTimes(combinations ,ms)
+    const raceTimesAverage = averageRaceTime(raceTimesObj)
+
+    //console.log(raceTimesObj)
+    //console.log(raceTimesAverage)
 
     return nthClosest(raceTimesObj, raceTimesAverage, teamSize)
 }
 
-console.log(findClosestNthTimes(times ,3))
+export function msToTime (time) {
+    const minute = Math.floor(Number(time) / 60000)
+    const minuteRemainder =Number(time) % 60000
+
+    const second = Math.floor(minuteRemainder / 1000)
+    const ms = minuteRemainder % 1000
+
+    return `${minute}:${second}.${ms}`
+}
