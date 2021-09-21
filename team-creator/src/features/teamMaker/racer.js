@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { racerChange, selectRacers } from './teamMakerSlice'
+import { deleteRacer, racerChange, selectRacers } from './teamMakerSlice'
 
 function Racer() {
     const racers = useSelector(selectRacers)
@@ -22,11 +22,12 @@ function Racer() {
                 return(
                     <div key={i}>
                         <label>
-                            Name: <input type="text" onChange ={e => handleRacerChange(i, 'name', e)} defaultValue={element.name}></input>
+                            Name: <input type="text" onChange ={e => handleRacerChange(i, 'name', e)} value={racers[i].name}></input>
                         </label>
                         <label>
-                            Time (mm:ss.ms): <input type="text" onChange ={e => handleRacerChange(i, 'time', e)} defaultValue={`${element.time}`}></input>
+                            Time (mm:ss.ms): <input type="text" onChange ={e => handleRacerChange(i, 'time', e)} value={racers[i].time}></input>
                         </label>
+                        <button onClick = {() => dispatch(deleteRacer(i))}>Delete</button>
                     </div>
                     )
                 })

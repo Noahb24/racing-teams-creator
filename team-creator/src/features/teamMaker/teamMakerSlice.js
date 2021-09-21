@@ -16,6 +16,12 @@ export const teamMakerSlice = createSlice ({
         addRacer: (state, action) => {
             state.racers.push(defaultRacer)
         },
+        deleteRacer: (state, action) => {
+            console.log(action.payload)
+            state.racers = [
+                ...state.racers.slice(0, action.payload),
+                ...state.racers.slice(action.payload + 1)]
+        },
         racerChange: (state, action) => {
             const type = action.payload.type
             const value = action.payload.value
@@ -27,6 +33,6 @@ export const teamMakerSlice = createSlice ({
 
 export const selectRacers = state => state.teamMaker.racers
 
-export const { addRacer, racerChange } = teamMakerSlice.actions
+export const { addRacer, racerChange, deleteRacer } = teamMakerSlice.actions
 
 export default teamMakerSlice.reducer
