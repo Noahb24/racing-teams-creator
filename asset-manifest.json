@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/race-team-creator/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/race-team-creator/static/js/main.6d436de9.chunk.js",
-    "main.js.map": "/race-team-creator/static/js/main.6d436de9.chunk.js.map",
-    "runtime-main.js": "/race-team-creator/static/js/runtime-main.fdedc6eb.js",
-    "runtime-main.js.map": "/race-team-creator/static/js/runtime-main.fdedc6eb.js.map",
-    "static/js/2.f119eb4b.chunk.js": "/race-team-creator/static/js/2.f119eb4b.chunk.js",
-    "static/js/2.f119eb4b.chunk.js.map": "/race-team-creator/static/js/2.f119eb4b.chunk.js.map",
-    "index.html": "/race-team-creator/index.html",
-    "static/css/main.6dea0f05.chunk.css.map": "/race-team-creator/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.f119eb4b.chunk.js.LICENSE.txt": "/race-team-creator/static/js/2.f119eb4b.chunk.js.LICENSE.txt"
+    "main.css": "/racing-teams-creator/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/racing-teams-creator/static/js/main.ade1cf5d.chunk.js",
+    "main.js.map": "/racing-teams-creator/static/js/main.ade1cf5d.chunk.js.map",
+    "runtime-main.js": "/racing-teams-creator/static/js/runtime-main.d07c1a27.js",
+    "runtime-main.js.map": "/racing-teams-creator/static/js/runtime-main.d07c1a27.js.map",
+    "static/js/2.f119eb4b.chunk.js": "/racing-teams-creator/static/js/2.f119eb4b.chunk.js",
+    "static/js/2.f119eb4b.chunk.js.map": "/racing-teams-creator/static/js/2.f119eb4b.chunk.js.map",
+    "index.html": "/racing-teams-creator/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/racing-teams-creator/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.f119eb4b.chunk.js.LICENSE.txt": "/racing-teams-creator/static/js/2.f119eb4b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.fdedc6eb.js",
+    "static/js/runtime-main.d07c1a27.js",
     "static/js/2.f119eb4b.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.6d436de9.chunk.js"
+    "static/js/main.ade1cf5d.chunk.js"
   ]
 }
