@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/race-team-creator/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/race-team-creator/static/js/main.275022b7.chunk.js",
+    "main.js.map": "/race-team-creator/static/js/main.275022b7.chunk.js.map",
+    "runtime-main.js": "/race-team-creator/static/js/runtime-main.fdedc6eb.js",
+    "runtime-main.js.map": "/race-team-creator/static/js/runtime-main.fdedc6eb.js.map",
+    "static/js/2.f119eb4b.chunk.js": "/race-team-creator/static/js/2.f119eb4b.chunk.js",
+    "static/js/2.f119eb4b.chunk.js.map": "/race-team-creator/static/js/2.f119eb4b.chunk.js.map",
+    "index.html": "/race-team-creator/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/race-team-creator/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.f119eb4b.chunk.js.LICENSE.txt": "/race-team-creator/static/js/2.f119eb4b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fdedc6eb.js",
+    "static/js/2.f119eb4b.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.275022b7.chunk.js"
+  ]
+}
