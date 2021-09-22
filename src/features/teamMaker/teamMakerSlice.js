@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    teamSize: 3,
+    teamSize: 0,
     racers: [
         {
         name: '',

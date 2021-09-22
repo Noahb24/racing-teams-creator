@@ -15,8 +15,17 @@ function TeamMaker() {
 
     function handleGetTeams () {
         let teams
-        try { 
-            teams = findClosestNthTimes(racers, teamSize)
+        let size
+        if(teamSize === 0){
+            try{
+                size = document.getElementById('option1').value
+            }catch(err){
+                console.log("Team Size Error")
+            }
+        } else size = teamSize
+
+        try {
+            teams = findClosestNthTimes(racers, size)
         } catch(err) {
             window.alert('Error in Creating Teams')
             console.log(err)
@@ -25,12 +34,24 @@ function TeamMaker() {
         dispatch(getTeams(teams))
     }
     
+    
     return (
         <div className = 'teamMaker'>
             <div className = 'header'>
                 <label>
                     Team Size:
-                    <input id="teamSize"onChange ={e => dispatch(teamSizeChange(e.target.value))} type='number' value = {teamSize}></input>
+                    <select id="teamSize" onChange ={e => dispatch(teamSizeChange(e.target.value))} type='number' value = {teamSize}>
+                        {
+                            racers.map((racer, i) => {
+                                const num = i +1
+                                if(num !== 1 && num !== racers.length && racers.length % num === 0){
+                                    return (
+                                        <option key={i} id={`option${i}`} value = {num}>{num}</option>
+                                    )
+                                }
+                            })
+                        }
+                    </select>
                 </label>
                 <button onClick={() => dispatch(addRacer())}>Add Racer</button>
                 <button onClick={() => handleGetTeams()}>Get Teams</button>
