@@ -1,4 +1,5 @@
-const times = [
+/* eslint-disable array-callback-return */
+/*const times = [
     {id: 0, time:'15:10.60'},
     {id: 1, time:'13:50.26'},
     {id: 2, time:'15:21.63'},
@@ -8,7 +9,7 @@ const times = [
     {id: 6, time:'13:36.18'},
     {id: 7, time:'14:25.68'},
     {id: 8, time:'15:24.15'}
-]
+]*/
 
 function k_combinations(set, k) {
 	var i, j, combs, head, tailcombs;
@@ -44,15 +45,17 @@ function tooMS (arr){
         const second = Number(time.slice(3,5)) * 1000
         const milSec = Number(time.slice(6))
         newArr.push(minute + second + milSec)
-    }) 
+    })
   return newArr  
 }
 
 function totalRaceTimes (combos, timesObj) {
     const totaledArr = []
     combos.map(combo => {
+        
         let comboTotal = 0
         combo.map(r => {
+
             comboTotal += timesObj[r]
             return ''
         })
@@ -76,6 +79,7 @@ function closest (raceTimesObjArr, goal, num){
     raceTimesObjArr.map(time => {
         arr.push(time.total)
     })
+    
     const closestTime =  arr.reduce((prev, curr) => {
         return (Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev)
     })
@@ -88,13 +92,17 @@ function nthClosest (raceTimesObjArr, goal, teams){
     let arr = raceTimesObjArr
     let b = 0
 
-
-
     for(let i = 0; i < teams; i){
         const close = closest(arr, goal, b)
-        const newArr = arr.filter(time => time.total !== close.total)
+
+        let newArr = arr.filter(time => time.total !== close.total)
         arr = newArr
         b++
+
+        //console.log(i + " " + teams)
+        //console.log(close)
+        //console.log(usedRacers)
+        //console.log(arr)
 
         if(!usedRacers.includes(close.combo[0]) && !usedRacers.includes(close.combo[1]) && !usedRacers.includes(close.combo[2])) {
             close.combo.map(racer => usedRacers.push(racer))
@@ -125,6 +133,7 @@ export function findClosestNthTimes (racerObj, teamSize) {
     //console.log(raceTimesObj)
     //console.log(raceTimesAverage)
 
+    //console.log(nthClosest(raceTimesObj, raceTimesAverage, teamSize))
     return nthClosest(raceTimesObj, raceTimesAverage, teamSize)
 }
 

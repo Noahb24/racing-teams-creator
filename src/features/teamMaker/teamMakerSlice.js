@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { findClosestNthTimes } from "./teamMakerlogic";
 
 const initialState = {
     teamSize: 3,
@@ -27,7 +26,7 @@ export const teamMakerSlice = createSlice ({
             })
         },
         deleteRacer: (state, action) => {
-            console.log(action.payload)
+            state.teams = []
             state.racers = [
                 ...state.racers.slice(0, action.payload),
                 ...state.racers.slice(action.payload + 1)]
@@ -39,7 +38,6 @@ export const teamMakerSlice = createSlice ({
             state.racers[num][type] = value
         },
         getTeams: (state, action) => {
-            
             state.teams = action.payload
         }
     }

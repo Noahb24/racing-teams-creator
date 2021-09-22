@@ -3,38 +3,47 @@ import {useDispatch, useSelector} from 'react-redux'
 import Racer from './racer'
 import Teams from './raceTeams'
 import { findClosestNthTimes } from './teamMakerlogic'
-import { addRacer, getTeams, selectRacers, selectTeamSize, teamSizeChange } from './teamMakerSlice'
+import { addRacer, getTeams, selectRacers, selectTeams, selectTeamSize, teamSizeChange } from './teamMakerSlice'
+import './teamMaker.css'
 
 
 function TeamMaker() {
     const dispatch = useDispatch()
     const teamSize = useSelector(selectTeamSize)
     const racers = useSelector(selectRacers)
+    const teams = useSelector(selectTeams)
 
     function handleGetTeams () {
-        const teams = findClosestNthTimes(racers, teamSize)
+        let teams
+        try { 
+            teams = findClosestNthTimes(racers, teamSize)
+        } catch(err) {
+            window.alert('Error in Creating Teams')
+            console.log(err)
+            return
+        }
         dispatch(getTeams(teams))
     }
     
     return (
-        <div>
+        <div className = 'teamMaker'>
             <div className = 'header'>
                 <label>
                     Team Size:
-                    <input onChange ={e => dispatch(teamSizeChange(e.target.value))} type='number' value = {teamSize}></input>
+                    <input id="teamSize"onChange ={e => dispatch(teamSizeChange(e.target.value))} type='number' value = {teamSize}></input>
                 </label>
+                <button onClick={() => dispatch(addRacer())}>Add Racer</button>
+                <button onClick={() => handleGetTeams()}>Get Teams</button>
             </div>
-            <div className = 'racers'>
-                Racers:
+
+            <div>
+                <h2>Racers: {racers.length}</h2>
                     <Racer />
             </div>
-            <button onClick={() => dispatch(addRacer())}>Add Racer</button>
-            <button onClick={() => handleGetTeams()}>Get Teams</button>
-            <div className = 'teams'>
-            </div>
-            <div className = 'teams'>
-                Teams:
-                <Teams />
+
+            <div>
+                <h2>Teams: {teams.length}</h2>
+                    <Teams />
             </div>
         </div>
     )

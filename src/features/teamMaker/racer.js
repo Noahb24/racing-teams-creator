@@ -16,18 +16,19 @@ function Racer() {
     }
 
     return (
-        <div>
+        <div className = "racers">
             {   
             racers.map( (element, i) => {
                 return(
-                    <div key={i}>
-                        <label>
-                            Name: <input type="text" onChange ={e => handleRacerChange(i, 'name', e)} value={racers[i].name}></input>
-                        </label>
-                        <label>
-                            Time (mm:ss.ms): <input type="text" onChange ={e => handleRacerChange(i, 'time', e)} value={racers[i].time}></input>
-                        </label>
-                        <button onClick = {() => dispatch(deleteRacer(i))}>Delete</button>
+                    <div key={i} className="racer">
+                        <p>Name: 
+                           <input id="name" type="text" onChange ={e => handleRacerChange(i, 'name', e)} value={racers[i].name}></input>
+                        </p>
+
+                        <p>Time (mm:ss.ms): 
+                           <input id="time" type="text" onChange ={e => handleRacerChange(i, 'time', e)} value={racers[i].time}></input>
+                           {/*button onClick = {() => dispatch(deleteRacer(i))}>Delete</button> */}
+                        </p>
                     </div>
                     )
                 })
