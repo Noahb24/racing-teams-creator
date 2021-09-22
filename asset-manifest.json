@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/racing-teams-creator/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/racing-teams-creator/static/js/main.ade1cf5d.chunk.js",
-    "main.js.map": "/racing-teams-creator/static/js/main.ade1cf5d.chunk.js.map",
+    "main.css": "/racing-teams-creator/static/css/main.e7114d2c.chunk.css",
+    "main.js": "/racing-teams-creator/static/js/main.b86f08e7.chunk.js",
+    "main.js.map": "/racing-teams-creator/static/js/main.b86f08e7.chunk.js.map",
     "runtime-main.js": "/racing-teams-creator/static/js/runtime-main.d07c1a27.js",
     "runtime-main.js.map": "/racing-teams-creator/static/js/runtime-main.d07c1a27.js.map",
-    "static/js/2.f119eb4b.chunk.js": "/racing-teams-creator/static/js/2.f119eb4b.chunk.js",
-    "static/js/2.f119eb4b.chunk.js.map": "/racing-teams-creator/static/js/2.f119eb4b.chunk.js.map",
+    "static/js/2.45dcf6f2.chunk.js": "/racing-teams-creator/static/js/2.45dcf6f2.chunk.js",
+    "static/js/2.45dcf6f2.chunk.js.map": "/racing-teams-creator/static/js/2.45dcf6f2.chunk.js.map",
     "index.html": "/racing-teams-creator/index.html",
-    "static/css/main.6dea0f05.chunk.css.map": "/racing-teams-creator/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.f119eb4b.chunk.js.LICENSE.txt": "/racing-teams-creator/static/js/2.f119eb4b.chunk.js.LICENSE.txt"
+    "static/css/main.e7114d2c.chunk.css.map": "/racing-teams-creator/static/css/main.e7114d2c.chunk.css.map",
+    "static/js/2.45dcf6f2.chunk.js.LICENSE.txt": "/racing-teams-creator/static/js/2.45dcf6f2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d07c1a27.js",
-    "static/js/2.f119eb4b.chunk.js",
-    "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.ade1cf5d.chunk.js"
+    "static/js/2.45dcf6f2.chunk.js",
+    "static/css/main.e7114d2c.chunk.css",
+    "static/js/main.b86f08e7.chunk.js"
   ]
 }
